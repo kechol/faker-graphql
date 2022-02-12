@@ -1,19 +1,6 @@
 import type { NextApiRequest, NextApiResponse, PageConfig } from "next";
-import { ApolloServer, gql } from "apollo-server-micro";
-
-const typeDefs = gql`
-  type Query {
-    hello: String
-  }
-`;
-
-const resolvers = {
-  Query: {
-    hello() {
-      return "Hello World!";
-    },
-  },
-};
+import { ApolloServer } from "apollo-server-micro";
+import schema from "../../graphql/schema";
 
 export const config: PageConfig = {
   api: {
@@ -21,8 +8,8 @@ export const config: PageConfig = {
   },
 };
 
-const server = new ApolloServer({ typeDefs, resolvers });
-const serverStart = server.start();
+const server = new ApolloServer({ schema });
+const startServer = server.start();
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   res.setHeader("Access-Control-Allow-Credentials", "true");
@@ -35,7 +22,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     return;
   }
 
-  await serverStart;
+  await startServer;
   await server.createHandler({ path: "/api/graphql" })(req, res);
 };
 export default handler;
