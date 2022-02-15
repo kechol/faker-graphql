@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "graphql:gen": "ts-node --compiler-options {\"module\":\"CommonJS\"} --transpileOnly graphql/schema/index.ts"
+    "graphql:gen": "ts-node --compiler-options {\\\"module\\\":\\\"CommonJS\\\"} --transpileOnly graphql/schema/index.ts"
   },
   "dependencies": {
     "@faker-js/faker": "^6.0.0-alpha.6",
