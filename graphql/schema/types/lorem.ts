@@ -1,5 +1,6 @@
+import { NextApiRequest } from "next";
 import faker from "@faker-js/faker";
-import { objectType, extendType, intArg } from "nexus";
+import { objectType, extendType } from "nexus";
 
 export const Lorem = objectType({
   name: "Lorem",
@@ -16,7 +17,10 @@ export const LoremQuery = extendType({
   definition(t) {
     t.nonNull.field("lorem", {
       type: "Lorem",
-      resolve: () => {
+      resolve: (_parent, _args, ctx: { req: NextApiRequest }) => {
+        if (ctx.req.query.seed) {
+          faker.seed(+ctx.req.query.seed);
+        }
         return {
           lines: faker.lorem.lines(),
           paragraphs: faker.lorem.paragraphs(),

@@ -8,7 +8,10 @@ export const config: PageConfig = {
   },
 };
 
-const server = new ApolloServer({ schema });
+const server = new ApolloServer({
+  schema,
+  context: (ctx: any) => ({ ...ctx }),
+});
 const startServer = server.start();
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
