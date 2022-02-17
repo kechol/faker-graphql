@@ -1,6 +1,6 @@
 import faker from "@faker-js/faker";
 import { objectType, extendType } from "nexus";
-import { setupFaker } from ".";
+import { setupFaker } from "./_util";
 
 export const Internet = objectType({
   name: "Internet",

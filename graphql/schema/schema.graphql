@@ -37,7 +37,6 @@ type Company {
   catchPhraseNoun: String!
   companyName: String!
   companySuffix: String!
-  suffixes: String!
 }
 
 type Date {

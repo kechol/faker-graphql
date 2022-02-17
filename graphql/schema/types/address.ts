@@ -1,6 +1,6 @@
 import faker from "@faker-js/faker";
 import { objectType, extendType } from "nexus";
-import { setupFaker } from "../types";
+import { setupFaker } from "./_util";
 
 export const Address = objectType({
   name: "Address",

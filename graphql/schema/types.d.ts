@@ -62,7 +62,6 @@ export interface NexusGenObjects {
     catchPhraseNoun: string; // String!
     companyName: string; // String!
     companySuffix: string; // String!
-    suffixes: string; // String!
   }
   Date: { // root type
     future: string; // String!
@@ -163,7 +162,6 @@ export interface NexusGenFieldTypes {
     catchPhraseNoun: string; // String!
     companyName: string; // String!
     companySuffix: string; // String!
-    suffixes: string; // String!
   }
   Date: { // field return type
     future: string; // String!
@@ -261,7 +259,6 @@ export interface NexusGenFieldTypeNames {
     catchPhraseNoun: 'String'
     companyName: 'String'
     companySuffix: 'String'
-    suffixes: 'String'
   }
   Date: { // field return type name
     future: 'String'

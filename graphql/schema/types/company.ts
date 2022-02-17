@@ -1,6 +1,6 @@
 import faker from "@faker-js/faker";
 import { objectType, extendType } from "nexus";
-import { setupFaker } from "../types";
+import { setupFaker } from "./_util";
 
 export const Company = objectType({
   name: "Company",
@@ -15,7 +15,6 @@ export const Company = objectType({
     t.nonNull.string("catchPhraseNoun");
     t.nonNull.string("companyName");
     t.nonNull.string("companySuffix");
-    t.nonNull.string("suffixes");
   },
 });
 
@@ -37,7 +36,6 @@ export const CompanyQuery = extendType({
           catchPhraseNoun: faker.company.catchPhraseNoun(),
           companyName: faker.company.companyName(),
           companySuffix: faker.company.companySuffix(),
-          suffixes: faker.company.suffixes(),
         };
       },
     });
