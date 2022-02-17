@@ -2,13 +2,104 @@
 ### Do not make changes to this file directly
 
 
+type Address {
+  cardinalDirection: String!
+  city: String!
+  cityName: String!
+  cityPrefix: String!
+  citySuffix: String!
+  country: String!
+  countryCode: String!
+  county: String!
+  direction: String!
+  latitude: String!
+  longitude: String!
+  ordinalDirection: String!
+  secondaryAddress: String!
+  state: String!
+  stateAbbr: String!
+  streetAddress: String!
+  streetName: String!
+  streetPrefix: String!
+  streetSuffix: String!
+  timeZone: String!
+  zipCode: String!
+}
+
+type Company {
+  bs: String!
+  bsAdjective: String!
+  bsBuzz: String!
+  bsNoun: String!
+  catchPhrase: String!
+  catchPhraseAdjective: String!
+  catchPhraseDescriptor: String!
+  catchPhraseNoun: String!
+  companyName: String!
+  companySuffix: String!
+  suffixes: String!
+}
+
+type Date {
+  future: String!
+  month: String!
+  past: String!
+  recent: String!
+  soon: String!
+  weekday: String!
+}
+
+type Internet {
+  avatar: String!
+  color: String!
+  domainName: String!
+  domainSuffix: String!
+  domainWord: String!
+  email: String!
+  exampleEmail: String!
+  httpMethod: String!
+  ip: String!
+  ipv6: String!
+  mac: String!
+  password: String!
+  port: String!
+  protocol: String!
+  url: String!
+  userAgent: String!
+  userName: String!
+}
+
 type Lorem {
-  lines: String
-  paragraphs: String
-  sentences: String
-  words: String
+  lines: String!
+  paragraph: String!
+  paragraphs: String!
+  sentence: String!
+  sentences: String!
+  slug: String!
+  text: String!
+  word: String!
+  words: String!
+}
+
+type Name {
+  firstName: String!
+  gender: String!
+  jobArea: String!
+  jobDescriptor: String!
+  jobTitle: String!
+  jobType: String!
+  lastName: String!
+  middleName: String!
+  prefix: String!
+  suffix: String!
+  title: String!
 }
 
 type Query {
+  address: Address!
+  company: Company!
+  date: Date!
+  internet: Internet!
   lorem: Lorem!
+  name: Name!
 }

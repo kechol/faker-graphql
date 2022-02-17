@@ -28,11 +28,92 @@ export interface NexusGenScalars {
 }
 
 export interface NexusGenObjects {
+  Address: { // root type
+    cardinalDirection: string; // String!
+    city: string; // String!
+    cityName: string; // String!
+    cityPrefix: string; // String!
+    citySuffix: string; // String!
+    country: string; // String!
+    countryCode: string; // String!
+    county: string; // String!
+    direction: string; // String!
+    latitude: string; // String!
+    longitude: string; // String!
+    ordinalDirection: string; // String!
+    secondaryAddress: string; // String!
+    state: string; // String!
+    stateAbbr: string; // String!
+    streetAddress: string; // String!
+    streetName: string; // String!
+    streetPrefix: string; // String!
+    streetSuffix: string; // String!
+    timeZone: string; // String!
+    zipCode: string; // String!
+  }
+  Company: { // root type
+    bs: string; // String!
+    bsAdjective: string; // String!
+    bsBuzz: string; // String!
+    bsNoun: string; // String!
+    catchPhrase: string; // String!
+    catchPhraseAdjective: string; // String!
+    catchPhraseDescriptor: string; // String!
+    catchPhraseNoun: string; // String!
+    companyName: string; // String!
+    companySuffix: string; // String!
+    suffixes: string; // String!
+  }
+  Date: { // root type
+    future: string; // String!
+    month: string; // String!
+    past: string; // String!
+    recent: string; // String!
+    soon: string; // String!
+    weekday: string; // String!
+  }
+  Internet: { // root type
+    avatar: string; // String!
+    color: string; // String!
+    domainName: string; // String!
+    domainSuffix: string; // String!
+    domainWord: string; // String!
+    email: string; // String!
+    exampleEmail: string; // String!
+    httpMethod: string; // String!
+    ip: string; // String!
+    ipv6: string; // String!
+    mac: string; // String!
+    password: string; // String!
+    port: string; // String!
+    protocol: string; // String!
+    url: string; // String!
+    userAgent: string; // String!
+    userName: string; // String!
+  }
   Lorem: { // root type
-    lines?: string | null; // String
-    paragraphs?: string | null; // String
-    sentences?: string | null; // String
-    words?: string | null; // String
+    lines: string; // String!
+    paragraph: string; // String!
+    paragraphs: string; // String!
+    sentence: string; // String!
+    sentences: string; // String!
+    slug: string; // String!
+    text: string; // String!
+    word: string; // String!
+    words: string; // String!
+  }
+  Name: { // root type
+    firstName: string; // String!
+    gender: string; // String!
+    jobArea: string; // String!
+    jobDescriptor: string; // String!
+    jobTitle: string; // String!
+    jobType: string; // String!
+    lastName: string; // String!
+    middleName: string; // String!
+    prefix: string; // String!
+    suffix: string; // String!
+    title: string; // String!
   }
   Query: {};
 }
@@ -48,26 +129,198 @@ export type NexusGenRootTypes = NexusGenObjects
 export type NexusGenAllTypes = NexusGenRootTypes & NexusGenScalars
 
 export interface NexusGenFieldTypes {
+  Address: { // field return type
+    cardinalDirection: string; // String!
+    city: string; // String!
+    cityName: string; // String!
+    cityPrefix: string; // String!
+    citySuffix: string; // String!
+    country: string; // String!
+    countryCode: string; // String!
+    county: string; // String!
+    direction: string; // String!
+    latitude: string; // String!
+    longitude: string; // String!
+    ordinalDirection: string; // String!
+    secondaryAddress: string; // String!
+    state: string; // String!
+    stateAbbr: string; // String!
+    streetAddress: string; // String!
+    streetName: string; // String!
+    streetPrefix: string; // String!
+    streetSuffix: string; // String!
+    timeZone: string; // String!
+    zipCode: string; // String!
+  }
+  Company: { // field return type
+    bs: string; // String!
+    bsAdjective: string; // String!
+    bsBuzz: string; // String!
+    bsNoun: string; // String!
+    catchPhrase: string; // String!
+    catchPhraseAdjective: string; // String!
+    catchPhraseDescriptor: string; // String!
+    catchPhraseNoun: string; // String!
+    companyName: string; // String!
+    companySuffix: string; // String!
+    suffixes: string; // String!
+  }
+  Date: { // field return type
+    future: string; // String!
+    month: string; // String!
+    past: string; // String!
+    recent: string; // String!
+    soon: string; // String!
+    weekday: string; // String!
+  }
+  Internet: { // field return type
+    avatar: string; // String!
+    color: string; // String!
+    domainName: string; // String!
+    domainSuffix: string; // String!
+    domainWord: string; // String!
+    email: string; // String!
+    exampleEmail: string; // String!
+    httpMethod: string; // String!
+    ip: string; // String!
+    ipv6: string; // String!
+    mac: string; // String!
+    password: string; // String!
+    port: string; // String!
+    protocol: string; // String!
+    url: string; // String!
+    userAgent: string; // String!
+    userName: string; // String!
+  }
   Lorem: { // field return type
-    lines: string | null; // String
-    paragraphs: string | null; // String
-    sentences: string | null; // String
-    words: string | null; // String
+    lines: string; // String!
+    paragraph: string; // String!
+    paragraphs: string; // String!
+    sentence: string; // String!
+    sentences: string; // String!
+    slug: string; // String!
+    text: string; // String!
+    word: string; // String!
+    words: string; // String!
+  }
+  Name: { // field return type
+    firstName: string; // String!
+    gender: string; // String!
+    jobArea: string; // String!
+    jobDescriptor: string; // String!
+    jobTitle: string; // String!
+    jobType: string; // String!
+    lastName: string; // String!
+    middleName: string; // String!
+    prefix: string; // String!
+    suffix: string; // String!
+    title: string; // String!
   }
   Query: { // field return type
+    address: NexusGenRootTypes['Address']; // Address!
+    company: NexusGenRootTypes['Company']; // Company!
+    date: NexusGenRootTypes['Date']; // Date!
+    internet: NexusGenRootTypes['Internet']; // Internet!
     lorem: NexusGenRootTypes['Lorem']; // Lorem!
+    name: NexusGenRootTypes['Name']; // Name!
   }
 }
 
 export interface NexusGenFieldTypeNames {
+  Address: { // field return type name
+    cardinalDirection: 'String'
+    city: 'String'
+    cityName: 'String'
+    cityPrefix: 'String'
+    citySuffix: 'String'
+    country: 'String'
+    countryCode: 'String'
+    county: 'String'
+    direction: 'String'
+    latitude: 'String'
+    longitude: 'String'
+    ordinalDirection: 'String'
+    secondaryAddress: 'String'
+    state: 'String'
+    stateAbbr: 'String'
+    streetAddress: 'String'
+    streetName: 'String'
+    streetPrefix: 'String'
+    streetSuffix: 'String'
+    timeZone: 'String'
+    zipCode: 'String'
+  }
+  Company: { // field return type name
+    bs: 'String'
+    bsAdjective: 'String'
+    bsBuzz: 'String'
+    bsNoun: 'String'
+    catchPhrase: 'String'
+    catchPhraseAdjective: 'String'
+    catchPhraseDescriptor: 'String'
+    catchPhraseNoun: 'String'
+    companyName: 'String'
+    companySuffix: 'String'
+    suffixes: 'String'
+  }
+  Date: { // field return type name
+    future: 'String'
+    month: 'String'
+    past: 'String'
+    recent: 'String'
+    soon: 'String'
+    weekday: 'String'
+  }
+  Internet: { // field return type name
+    avatar: 'String'
+    color: 'String'
+    domainName: 'String'
+    domainSuffix: 'String'
+    domainWord: 'String'
+    email: 'String'
+    exampleEmail: 'String'
+    httpMethod: 'String'
+    ip: 'String'
+    ipv6: 'String'
+    mac: 'String'
+    password: 'String'
+    port: 'String'
+    protocol: 'String'
+    url: 'String'
+    userAgent: 'String'
+    userName: 'String'
+  }
   Lorem: { // field return type name
     lines: 'String'
+    paragraph: 'String'
     paragraphs: 'String'
+    sentence: 'String'
     sentences: 'String'
+    slug: 'String'
+    text: 'String'
+    word: 'String'
     words: 'String'
   }
+  Name: { // field return type name
+    firstName: 'String'
+    gender: 'String'
+    jobArea: 'String'
+    jobDescriptor: 'String'
+    jobTitle: 'String'
+    jobType: 'String'
+    lastName: 'String'
+    middleName: 'String'
+    prefix: 'String'
+    suffix: 'String'
+    title: 'String'
+  }
   Query: { // field return type name
+    address: 'Address'
+    company: 'Company'
+    date: 'Date'
+    internet: 'Internet'
     lorem: 'Lorem'
+    name: 'Name'
   }
 }
 
