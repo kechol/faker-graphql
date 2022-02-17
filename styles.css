@@ -1,0 +1,27 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(350deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 255, 1) 35%, rgba(0, 101, 255, 1) 100%);
+}
+
+.main {
+  padding: 120px 0 0;
+  text-align: center;
+}
+
+.github {
+  padding: 40px 0 0;
+}
+
+h1 {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+a {
+  color: rgb(255, 255, 255);
+}
