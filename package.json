@@ -1,5 +1,5 @@
 {
-  "name": "faker-ja",
+  "name": "faker-graphql",
   "private": true,
   "scripts": {
     "dev": "next dev",
