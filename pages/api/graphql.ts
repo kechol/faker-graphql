@@ -11,6 +11,7 @@ export const config: PageConfig = {
 const server = new ApolloServer({
   schema,
   context: (ctx: any) => ({ ...ctx }),
+  introspection: true,
 });
 const startServer = server.start();
 
